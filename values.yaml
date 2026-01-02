@@ -3,6 +3,6 @@ image:
   tag: latest
   pullPolicy: IfNotPresent
 imagepullSecrets:
-  - name: private-registry-secret
+  - name: private-registry-credentials
 service:
   port: 8080
