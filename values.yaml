@@ -2,7 +2,7 @@ image:
   repository: europe-west1-docker.pkg.dev/devops-sandbox-418714/docker-registry/metric-stream-service
   tag: latest
   pullPolicy: IfNotPresent
-imagepullSecrets:
+imagePullSecrets:
   - name: private-registry-credentials
 service:
   port: 8080
