@@ -6,3 +6,11 @@ imagePullSecrets:
   - name: private-registry-credentials
 service:
   port: 8080
+livenessProbe:
+  httpGet:
+    path: /hello
+    port: http
+readinessProbe:
+  httpGet:
+    path: /hello
+    port: http
