@@ -1,6 +1,7 @@
 creation_rules:
     - age:
         - age1aaw6unnk6grdmv6f5kqggye8798nac9w4erskcvk3w34gm5z35ys3vpjlr
+        - age1dtp68pexh38r66ggk229aah7r0uwcrfjwh9amzu2qd4qa5c4ddvs4rxzu6
         - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHHQ+p4FUb1FaAvDVEu0oKqH+ID/+ng3wpyEdMiNjIwp arthur.garreau98@gmail.com
 stores:
     yaml:

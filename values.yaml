@@ -2,6 +2,19 @@ image:
   repository: europe-west1-docker.pkg.dev/devops-sandbox-418714/docker-registry/metric-stream-service
   tag: latest
   pullPolicy: IfNotPresent
+serverBlock: |-
+  server {
+    listen 0.0.0.0:8080;
+    location / {
+      default_type text/html;
+      return 200 "hello cinqo!";
+    }
+  }
+tls:
+  enabled: false
+imageCredentials:
+  registry: europe-west1-docker.pkg.dev
+  email: k8s-image-pull-sa@devops-sandbox-418714.iam.gserviceaccount.com
 imagePullSecrets:
   - name: private-registry-credentials
 service:
@@ -14,3 +27,6 @@ readinessProbe:
   httpGet:
     path: /hello
     port: http
+env:
+  - name: HELLO_NAME
+    value: Custom Hello
